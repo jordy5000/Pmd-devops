@@ -17,14 +17,15 @@ export class AppComponent {
   constructor(private readonly http: HttpClient){}
 
   cGetProducts() {
-    console.log('Before http')
-    this.http.get('http://localhost:3000/products/allproducts').subscribe(
+    const pruduct= {
+      pName: 'product name',
+      pType: 'product type',
+    }
+    this.http.post('http://localhost:3000/products',pruduct).subscribe(
       (data) => {
         console.log('In http')
         console.log(data)
       })
       console.log('After http')
   }
-
-
-}
+  }

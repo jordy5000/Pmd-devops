@@ -14,10 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'pmd-devops' title`, () => {
+  it(`should have the 'pmd_devops' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pmd-devops');
+    expect(app.title).toEqual('pmd_devops');
   });
 
   it('should render title', () => {
@@ -26,5 +26,6 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, pmd-devops');
   });
-});
 
+  
+});
